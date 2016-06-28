@@ -31,7 +31,7 @@ and open the template in the editor.
             }
             public function getName()
                     {
-                return $this->name=$name;
+                return $this->name;
             }
             
           
@@ -50,12 +50,11 @@ and open the template in the editor.
         }
         
         $pet = new Cat("kitty");
-        echo $pet->name;
+        $pet->setName('kkkk');
+              echo  $pet->getName();
+      
         echo"<br>";
-        
-        $pet->name="HELLO HITTY";
-        echo $pet->name;
-        echo"<br>";
+
              
         
         $movePosition = $pet->moveTo(3, 5);
