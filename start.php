@@ -38,6 +38,21 @@ and open the template in the editor.
             }
         }
         
+        $pet = new Cat("kitty");
+        echo $pet->name;
+        echo"<br>";
+        
+        $pet->name="HELLO HITTY";
+        echo $pet->name;
+        echo"<br>";
+             
+        
+        $movePosition = $pet->moveTo(3, 5);
+                echo "(".$movePosition['x'].",".$movePosition['y'] .")";
+                echo"<br>";
+                
+               $movePosition =$pet->resetPosition();
+               echo   "(".$movePosition['x'].",".$movePosition['y'] .")";
        
         ?>
     </body>
