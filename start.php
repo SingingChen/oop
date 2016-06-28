@@ -12,7 +12,20 @@ and open the template in the editor.
     <body>
         <?php
         
+        class Animal{
+            private  $animalType;
+            protected  $position;
+            public function __construct($animalType) {
+                $this->animalType=$animalType;
+                 $this->position=[0,0];
+            }
+            
+        }
         
+        class Cat extends Animal{
+            
+            protected $name;
+        }
         
         class Cat 
         {
@@ -50,8 +63,9 @@ and open the template in the editor.
         }
         
         $pet = new Cat("kitty");
-        $pet->setName('kkkk');
-              echo  $pet->getName();
+        $pet->setName('nunu');
+             
+        echo  $pet->getName();
       
         echo"<br>";
 
