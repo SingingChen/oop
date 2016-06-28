@@ -24,11 +24,6 @@ and open the template in the editor.
         
         class Cat extends Animal{
             
-            protected $name;
-        }
-        
-        class Cat 
-        {
             protected $name;//屬性
             protected $position;
             
