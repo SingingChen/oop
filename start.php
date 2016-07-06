@@ -20,6 +20,7 @@ and open the template in the editor.
                  $this->position=[0,0];
             }
             
+            
         }
         
         class Cat extends Animal{
