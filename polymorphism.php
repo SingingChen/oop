@@ -9,7 +9,9 @@ class dataStorage//網站獲得 存取資料用
 
     public function addData(dataTransferImterface $dataTransfer)//取得資料方法
     {
-        $dataTransfer->dataID();
-        $dataTransfer->data();
+        protected $dataArray =[];
+       $arrayKey= $dataTransfer->dataID();
+        $arrayValue=$dataTransfer->data();
+        $this->dataArray[$arrayKey]=$arrayValue;
     }
 }
