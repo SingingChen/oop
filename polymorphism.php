@@ -9,14 +9,10 @@ class dataStorage//網站獲得 存取資料用
     protected $dataArray =[];//宣告存放資料用的陣列
     public function addData(dataTransferImterface $dataTransfer)//取得資料方法
     {
-
        $arrayKey= $dataTransfer->getdataID();
         $arrayValue=$dataTransfer->getdata();
         $this->dataArray[$arrayKey]=$arrayValue;
     }
-
-
-
     public function getDataArray()
     {
         return $this->dataArray;
@@ -36,9 +32,11 @@ class transferProtocolA implements dataTransferImterface
         $value="value";
         return $value;
     }
-
-
 }
 
-
 //實際產生物件後使用
+$dataStorage= new dataStorage();
+$transferProtocolA = new transferProtocolA();
+
+$dataStorage->addData($transferProtocolA);
+$dataArray =$dataStorage->getDataArray();
