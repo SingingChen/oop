@@ -16,8 +16,29 @@ class dataStorage//網站獲得 存取資料用
     }
 
 
+
     public function getDataArray()
     {
         return $this->dataArray;
     }
 }
+//練習做一個使用該介面的物件
+
+class transferProtocolA implements dataTransferImterface
+{
+    public function getdataID()
+    {
+        $key="key";
+        return $key;
+    }
+    public function getdata()
+    {
+        $value="value";
+        return $value;
+    }
+
+
+}
+
+
+//實際產生物件後使用
