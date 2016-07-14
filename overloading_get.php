@@ -16,8 +16,8 @@
         }
         
         $a = new a;
-        echo $a->var1."\n"."<br>";
-        echo $a->var2."\n"."<br>";
+        echo $a->var1."\n"."<br>";//找不到var1 ,找get__ 把var1丟進$name裡 var1===var1  ,return "abc"
+        echo $a->var2."\n"."<br>";//找不到var1 ,找get__ 把var2丟進$name裡 var2不等於var1  , return "var2"
         
         class b {
             private $var1 = 'abc';

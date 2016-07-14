@@ -11,6 +11,10 @@ and open the template in the editor.
 </head>
 <body>
 <?php
+interface Action{
+    public function  move($x,$y);
+
+}
 class Animal{
     private $animalType;
     protected $position;
@@ -47,7 +51,7 @@ $this->animalType=$animalTypeFromOut;
 
     }
 }
-class Cat extends Animal{
+class Cat extends Animal implements Action{
     protected $name;
     public static $staticproperty="test";//靜態屬性,現在可以給值
 

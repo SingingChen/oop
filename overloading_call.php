@@ -13,10 +13,16 @@
             }
         }
         $a = new a;
-        $a->func1('abc', 'def');
+        $a->func1('abc', 'def');//找不到func1 就找__call, $name=func1 , $args=('abc', 'def') ,
         echo "<br>";
 
         class b {
+            /**
+             * @param $name
+             * @param $args
+             * @return int|string
+             * @throws Exception
+             */
             function __call($name, $args) {
                 switch($name) {
                     case 'add':
@@ -25,7 +31,8 @@
                                 return $args[0]+$args[1];
                             if(is_string($args[0]) && is_string($args[1]))
                                 return $args[0].$args[1];
-                        }else return "飛飛飛<br>";
+                        }else
+                        {  return "飛飛飛<br>";}
                         
                     default:
                         throw new Exception("[warning] b::$name method not found.\n");

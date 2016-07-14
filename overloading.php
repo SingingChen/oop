@@ -17,6 +17,17 @@ echo $a->var1;//會觸發可用在屬性多載的  magic method 因為沒有在�
 
 $a->undefinedMethod("參數1","參數2");//會觸發可用在屬性多載的  magic method 因為沒有在定義類別中
 
+class TestOverload
+{
+    function  __call($methodName,$arguments)
+    {
+
+    }
+}
+$testOverload=new TestOverload();
+echo $testOverload->testFunction("參數1");
+echo $testOverload->testFunction("參數1","參數2");
+
 echo"~end~";
 
 ?>
